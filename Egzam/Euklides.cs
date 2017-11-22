@@ -12,7 +12,8 @@ namespace Egzam
         //wiersz jest rowny kolumnie z excella
         List<List<string>> convert = new List<List<string>>();
 
-        private List<Tuple<double,int>> proposition = new List<Tuple<double, int>>();
+        private List<Tuple<double, int>> proposition = new List<Tuple<double, int>>();
+
         public Euklides Licz(TFM tfm)
         {
             Console.Clear();
@@ -48,12 +49,12 @@ namespace Egzam
                         value += Math.Pow(Math.Abs(temp), 2.0);
                 }
                 value = Math.Pow(value, 1.0 / 2.0);
-            this.Add(value);
+                this.Add(value);
                 proposition.Add(new Tuple<double, int>(value, i));
 
             }
 
-            proposition=proposition.OrderBy(x => x.Item1).ToList();
+            proposition = proposition.OrderBy(x => x.Item1).ToList();
             var minValue = proposition[1].Item1;
             var offsetValue = (proposition.Last().Item1 - minValue) / 3;
             for (int i = proposition.Count - 1; i >= 0; i--)
@@ -70,23 +71,25 @@ namespace Egzam
                 {
                     Console.Write("Duzo - ");
                 }
-                Console.Write(String.Format("{0,4:00.00} - ",proposition[i].Item1));
+                Console.Write(String.Format("{0,4:00.00} - ", proposition[i].Item1));
                 wyswietlPropozycje(convert.Count - 1, proposition[i].Item2, tfm);
             }
             return this;
         }
 
-        private void wyswietlPropozycje(int CustomerId,int BestEquals,TFM tfm)
+        private void wyswietlPropozycje(int CustomerId, int BestEquals, TFM tfm)
         {
             PropertyInfo[] properties = typeof(dItem).GetProperties();
             Console.WriteLine(properties.Last().GetValue(tfm[BestEquals]));
-            string str ="" ;
-            for (var index = 0; index < properties.Length-6; index++)
+            string str = "";
+            for (var index = 0; index < properties.Length - 6; index++)
             {
                 PropertyInfo property = properties[index];
-                if (!property.GetValue(tfm[CustomerId]).ToString().Equals(property.GetValue(tfm[BestEquals]).ToString()) && property.GetValue(tfm[CustomerId]).ToString().Equals("False"))
+                if (!property.GetValue(tfm[CustomerId]).ToString()
+                        .Equals(property.GetValue(tfm[BestEquals]).ToString()) &&
+                    property.GetValue(tfm[CustomerId]).ToString().Equals("False"))
                 {
-                    str+=("         "+index+". "+ properties[index].Name+Environment.NewLine);
+                    str += ("         " + index + ". " + properties[index].Name + Environment.NewLine);
                 }
             }
             if (!str.Equals(""))
