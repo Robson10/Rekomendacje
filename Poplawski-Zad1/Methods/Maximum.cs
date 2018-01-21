@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Poplawski_Zad1.Methods
+namespace Cwiczenia.Methods
 {
     class Maximum: List<List<int>>
     {

@@ -24,12 +24,21 @@ namespace Egzam
             for (int i = 0; i < tfm.Count(); i++)
             {
                 convert.Add(new List<string>());
-                //Console.WriteLine();
+                Console.WriteLine();
                 for (var index = 0; index < properties.Length; index++)
                 {
                     PropertyInfo property = properties[index];
                     var temp = property.GetValue(tfm[i]).ToString();
                     convert[i].Add((temp.Equals("True") ? "1" : (temp.Equals("False") ? "0" : temp)));
+                    
+                    if (index > properties.Length - 4)
+                    {
+                        Console.Write(String.Format("{0,15:0}", convert[i][index]));
+                    }
+                    else if(index>=32)
+                        Console.Write(String.Format("{0,4:0}", convert[i][index]));
+                    else
+                    Console.Write(String.Format("{0,2:0}", convert[i][index]));
                 }
             }
 
@@ -60,17 +69,11 @@ namespace Egzam
             for (int i = proposition.Count - 1; i >= 0; i--)
             {
                 if (proposition[i].Item1 < minValue + offsetValue)
-                {
                     Console.Write("Malo - ");
-                }
                 else if (proposition[i].Item1 < minValue + offsetValue * 2)
-                {
                     Console.Write("Sred - ");
-                }
                 else
-                {
                     Console.Write("Duzo - ");
-                }
                 Console.Write(String.Format("{0,4:00.00} - ", proposition[i].Item1));
                 wyswietlPropozycje(convert.Count - 1, proposition[i].Item2, tfm);
             }
@@ -88,15 +91,11 @@ namespace Egzam
                 if (!property.GetValue(tfm[CustomerId]).ToString()
                         .Equals(property.GetValue(tfm[BestEquals]).ToString()) &&
                     property.GetValue(tfm[CustomerId]).ToString().Equals("False"))
-                {
                     str += ("         " + index + ". " + properties[index].Name + Environment.NewLine);
-                }
             }
             if (!str.Equals(""))
             {
-                //Console.WriteLine("     Moze ");
                 Console.WriteLine(str);
-                //Console.WriteLine("     do tego?");
                 Console.WriteLine();
             }
         }

@@ -17,14 +17,14 @@ namespace Egzam
 
             int h = DateTime.Now.TimeOfDay.Hours;
             Console.WriteLine("Podaj Imie i Nazwisko");
-            string name="Robert";//=Console.ReadLine();
+            string name="Harry Router";//=Console.ReadLine();
             Console.WriteLine("Podaj Wiek");
-            int wiek = 20;// Int32.Parse(Console.ReadLine());
+            int wiek = 23;// Int32.Parse(Console.ReadLine());
             wiek =(int) (Math.Round(wiek / 10.0)*10);
             Console.WriteLine("Podaj Płeć (m/k)");
             string plec = "m";// Console.ReadLine();
             Console.WriteLine("Podaj Miasto");
-            string miasto = "Koszalin";//Console.ReadLine();
+            string miasto = "Karlino";//Console.ReadLine();
             Console.WriteLine("Podaj Województwo");
             string wojewodztwo = "ZP";// Console.ReadLine();
 

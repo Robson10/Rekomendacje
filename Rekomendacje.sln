@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2005
+VisualStudioVersion = 15.0.27130.2003
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rekomendacje", "Poplawski-Zad1\Rekomendacje.csproj", "{334FB9DD-28C2-4049-8474-C95814058457}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cwiczenia", "Poplawski-Zad1\Cwiczenia.csproj", "{334FB9DD-28C2-4049-8474-C95814058457}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Egzam", "Egzam\Egzam.csproj", "{28D96F8A-E49F-4841-9875-DA91A13000F7}"
 EndProject

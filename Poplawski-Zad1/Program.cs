@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Text.RegularExpressions;
 using System.Linq;
-using Poplawski_Zad1.Methods;
+using Cwiczenia.Methods;
 
-namespace Poplawski_Zad1
+namespace Cwiczenia
 {
     class Program
     {

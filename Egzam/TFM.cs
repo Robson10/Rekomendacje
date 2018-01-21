@@ -9,7 +9,6 @@ namespace Egzam
     class TFM : List<dItem>
     {
         static List<dItem> d = new List<dItem>();
-        //https://mcdonalds.pl/oferta/
         public static List<string> t = new List<string>()
         {
             "Wieśmac",
@@ -54,7 +53,8 @@ namespace Egzam
         public void Wypelnij()
         {
             List<dItem> temp = new List<dItem>();
-            temp.Add(new dItem(10, 10, true, "Koszalin", "ZP", "User" + (temp.Count  +1)){HappyMeal=true,Sok= true, MalyLod= true });
+            temp.Add(new dItem(10, 10, true, "Koszalin", "ZP", "User" + (temp.Count  +1))
+            { HappyMeal=true,Sok= true, MalyLod= true });
             temp.Add(new dItem(11, 20, false, "Koszalin", "ZP", "User" + (temp.Count  +1)){KurczakBurger= true, Cola= true });
             temp.Add(new dItem(13, 30, false, "Koszalin", "ZP", "User" + (temp.Count  +1)) { Chicker = true, Cola = true,Katchup=true, Frytki= true });
             temp.Add(new dItem(16, 30, true, "Koszalin", "ZP", "User" + (temp.Count  +1)){Hamburger= true, Cola= true, Frytki= true });

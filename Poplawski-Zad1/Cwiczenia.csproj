@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{334FB9DD-28C2-4049-8474-C95814058457}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Poplawski_Zad1</RootNamespace>
-    <AssemblyName>Poplawski-Zad1</AssemblyName>
+    <RootNamespace>Cwiczenia</RootNamespace>
+    <AssemblyName>Cwiczenia</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -55,6 +55,26 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Arkusz kalkulacyjny\Robert Mucha - ISD.pdf" />
+    <None Include="Arkusz kalkulacyjny\Robert Mucha - ISD.xlsx" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="txtFiles\d0-Wszechobecny fast food.txt" />
+    <EmbeddedResource Include="txtFiles\d1-dlaczego hot-dogi sa niezdrowe.txt" />
+    <EmbeddedResource Include="txtFiles\d10-Zawały serca rano najbardziej śmiertelne.txt" />
+    <EmbeddedResource Include="txtFiles\d11-Zawał serca.txt" />
+    <EmbeddedResource Include="txtFiles\d12-Kalorie.txt" />
+    <EmbeddedResource Include="txtFiles\d13-Ile kalorii ma jedzenie typu fast food.txt" />
+    <EmbeddedResource Include="txtFiles\d14-Fast food bez wyrzutów sumienia. To możliwe.txt" />
+    <EmbeddedResource Include="txtFiles\d2-Jak zjeść zdrowo w restauracji fast food.txt" />
+    <EmbeddedResource Include="txtFiles\d3-Fast food czy żywność bio.txt" />
+    <EmbeddedResource Include="txtFiles\d4-Czipsy i frytki bardziej szkodliwe, niż myśleliśmy.txt" />
+    <EmbeddedResource Include="txtFiles\d5-14-letni hamburger z McDonalda wygląda prawie jak nowy.txt" />
+    <EmbeddedResource Include="txtFiles\d6- Fast Food.txt" />
+    <EmbeddedResource Include="txtFiles\d7-Fast food - czemu tak naprawdę jest szkodliwy.txt" />
+    <EmbeddedResource Include="txtFiles\d8-Otyłość kiedy własne ciało zabija.txt" />
+    <EmbeddedResource Include="txtFiles\d9-Otyłość.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -49,11 +49,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Sprawozdanie\Robert Mucha - Sprawozdanie do aplikacji.docx" />
+    <None Include="Sprawozdanie\Robert Mucha - Sprawozdanie do aplikacji.pdf" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Poplawski-Zad1\Rekomendacje.csproj">
+    <ProjectReference Include="..\Poplawski-Zad1\Cwiczenia.csproj">
       <Project>{334fb9dd-28c2-4049-8474-c95814058457}</Project>
-      <Name>Rekomendacje</Name>
+      <Name>Cwiczenia</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

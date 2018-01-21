@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.IO;
+using System.Reflection;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
-namespace Poplawski_Zad1.Methods
+namespace Cwiczenia.Methods
 {
     class TFM : List<List<int>>
     {
@@ -22,7 +21,14 @@ namespace Poplawski_Zad1.Methods
         {
             for (int i = 0; i < d.Count; i++)
             {
-                d[i].textFromFile = Helper.ReadFile(d[i].FileName).ToLowerInvariant();
+                var assembly = Assembly.GetExecutingAssembly();
+                var resourceName = d[i].FileName;
+
+                using (Stream stream = assembly.GetManifestResourceStream(resourceName))
+                using (StreamReader reader = new StreamReader(stream))
+                {
+                    d[i].textFromFile = reader.ReadToEnd().ToLowerInvariant();
+                }
                 d[i].textFromFile = d[i].textFromFile.Replace("ą", "a").Replace("ę", "e").Replace("ś", "s").Replace("ć", "c").Replace("ł", "l").Replace("ń", "n").Replace("ó", "o").Replace("ź", "z").Replace("ż", "z");
                 Add(new List<int>());
                 for (int j = 0; j < t.Count; j++)
@@ -45,7 +51,7 @@ namespace Poplawski_Zad1.Methods
     {
         public dItem(string name)
         {
-            FileName = name;
+            FileName = "Cwiczenia.txtFiles."+ name;
         }
         public string FileName { get; set; }
         public string textFromFile { get; set; }
@@ -63,7 +69,7 @@ namespace Poplawski_Zad1.Methods
                     new dItem("d5-14-letni hamburger z McDonalda wygląda prawie jak nowy.txt"),
                     new dItem("d6- Fast Food.txt"),
                     new dItem("d7-Fast food - czemu tak naprawdę jest szkodliwy.txt"),
-                    new dItem("d8-Otyłość – kiedy własne ciało zabija.txt"),
+                    new dItem("d8-Otyłość kiedy własne ciało zabija.txt"),
                     new dItem("d9-Otyłość.txt"),
 
                     new dItem("d10-Zawały serca rano najbardziej śmiertelne.txt"),
